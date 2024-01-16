@@ -113,7 +113,7 @@ class ToDoApp(fl.UserControl):
                     )
     
     def add_click(self, e):
-        task = Task(self.new_item.value, self.task_status_change, self.task_delete)
+        task = Task(self.new_item.value, self.task_delete, self.task_status_change)
         self.tasks.controls.append(task)
         self.new_item.value = ""
         self.update()
